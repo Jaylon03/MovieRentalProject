@@ -1,0 +1,55 @@
+.header {
+  background-color: var(--white);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center; /* Ensure vertical alignment of items */
+}
+
+.nav-link {
+  display: flex; /* Flex layout for icon and text */
+  align-items: center; /* Vertically align icon and text */
+  gap: 0.5rem; /* Space between icon and text */
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-link span {
+  margin-left: 4px; /* Space between text and cart count */
+  font-weight: bold; /* Highlight the cart count */
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link svg {
+  margin-right: 0.3rem; /* Adjust spacing for the cart icon */
+}
