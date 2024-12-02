@@ -52,6 +52,29 @@ app.get("/movies", (req, res) => {
   });
 });
 
+app.post("/checkout", (req, res) => {
+  const { name, email, phoneNumber, address, cardNumber } = req.body;
+
+  if (!name || !email || !phoneNumber || !address || !cardNumber) {
+    res.status(400).send("All fields are required.");
+    return;
+  }
+
+  const query = `
+    INSERT INTO customer_table (Name, Email, PhoneNumber, Address, Card)
+    VALUES (?, ?, ?, ?, ?)
+  `;
+
+  db.query(query, [name, email, phoneNumber, address, cardNumber], (err, result) => {
+    if (err) {
+      console.error("Error inserting data:", err);
+      res.status(500).send("Error processing checkout.");
+    } else {
+      res.status(201).send("Checkout successful!");
+    }
+  });
+});
+
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
