@@ -17,14 +17,13 @@
   transform: scale(1.05);
 }
 
-/* Movie Image */
 .movie-image {
-  width: 100%;
+  width: 100%; /* Scale image proportionally */
   height: auto;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 5px;
+  object-fit: cover; /* Prevent distortion */
+  image-rendering: auto; /* Ensure smooth rendering */
 }
+
 
 /* Movie Content */
 .movie-content {

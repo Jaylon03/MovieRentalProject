@@ -1,6 +1,6 @@
 import express from "express";
 import mysql from "mysql2";
-import cors from "cors"; // Import cors
+import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
